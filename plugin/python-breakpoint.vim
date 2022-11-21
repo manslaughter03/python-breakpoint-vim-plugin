@@ -23,7 +23,7 @@ def get_ip_address(ifname):
 
 def generate_breakpoint(ifname, port=5679, reverse=True):
     ip = get_ip_address(ifname.encode())
-    return f"breakpoint(host={ip}, port={port}, reverse={reverse})"
+    return f'breakpoint(host="{ip}", port={port}, reverse={reverse})'
 EOF
 
 let g:python_breakpoint_loaded = 1
